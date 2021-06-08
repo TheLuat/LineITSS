@@ -1,9 +1,7 @@
 
-
-int x=13;
 int x1=12;
 int x2=4;
-int x3=3;
+int x3=2;
 int a,b,c,d;
 int PWM_MAX_SPEED=80;
 int PWM_SPEED=75;
@@ -11,10 +9,10 @@ int MOTOR_LEFT_1=11;
 int MOTOR_LEFT_2=10;
 // Motor 1
 int MOTOR_RIGHT_1=9;
-int MOTOR_RIGHT_2=6;
+int MOTOR_RIGHT_2=3;
 void setup() {
   // put your setup code here, to run once:
-  pinMode(x,INPUT);
+
   pinMode(x1,INPUT);
   pinMode(x2,INPUT);
   pinMode(x3,INPUT);
@@ -65,23 +63,18 @@ void Right()
 
 void loop() {
   // put your main code here, to run repeatedly:
-  a=digitalRead(x);
-  Serial.println(a);
+
   b=digitalRead(x1);
   Serial.println(b);
   c=digitalRead(x2);
   Serial.println(c);
   d=digitalRead(x3);
   Serial.println(d);
-  if (b ==1 && c==0 && a==0 && d==0 )
+  if (b ==1 && c==0 && d==0 )
   Left();
-  else if (c==1 && d==0 && a==0 && b==0)
+  else if (c==1 && d==0 && b==0)
   Right();
   else
   Forward();
   
-  
-  
-  
-
 }
